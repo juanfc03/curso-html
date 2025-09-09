@@ -1,13 +1,109 @@
 <!DOCTYPE html>
 <html lang="es-ES">
+
 <head>
     <meta charset="UTF-8">
+
+    <!-- Para diseño responsive en móviles y tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducción al HTML</title>
+
+    <!-- Un poco de SEO y descripción -->
+    <meta name="description" content="Aprende HTML, CSS y JavaScript con ejemplos prácticos">
+    <meta name="keywords" content="HTML, CSS, JavaScript, tutorial, aprendizaje">
+    <meta name="author" content="Juan Fernández Ceacero">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09f">
+
+    <!-- Etiquetas Open Graph, no están bien definidas -->
+    <meta property="og:title" content="Seguimos con HTML">
+    <meta property="og:description" content="Aprende HTML, CSS y JavaScript con ejemplos prácticos">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tusitio.com/">
+    <meta property="og:image" content="https://www.tusitio.com/images/preview.png">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="alternate" hreflang="en" href="https://www.tusitio.com/en/pagina.html">
+    <link rel="canonical" href="https://www.tusitio.com/pagina-principal.html">
+
+
+    <!-- Refrescar página cada 30 segundos (opcional) -->
+    <!-- <meta http-equiv="refresh" content="30"> -->
+
+    <title>Seguimos con HTML</title>
     <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Favicon -->
 
+    <!-- <base href="./"> -->
+
+    <style>
+        iframe {
+            width: 2000px;
+            height: 600px;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <!-- Iframes -->
+    <iframe src="https://midu.dev/" title="Pagina de Midudev" frameborder="0"></iframe>
+
+    <!-- Mostrar fecha actual con JavaScript -->
+    <p id="fecha"></p>
+
+    <script>
+        document.getElementById("fecha").innerHTML = Date();
+    </script>
+
+    <noscript>Tu navegador no soporta JavaScript</noscript>
+
+    <!-- HEADER: Encabezado principal del documento -->
+    <header>
+        <h1>Mi Blog de Tecnología</h1>
+        <p>Bienvenido a mi página de noticias y tutoriales</p>
+    </header>
+
+    <!-- NAV: Menú de navegación principal -->
+    <nav>
+        <a href="#">Inicio</a> |
+        <a href="#">Artículos</a> |
+        <a href="#">Contacto</a>
+    </nav>
+
+    <!-- MAIN: Contenido principal de la página -->
+    <main>
+
+        <!-- SECTION: Sección temática del contenido -->
+        <section>
+
+            <!-- ARTICLE: Contenido independiente, por ejemplo un post -->
+            <article>
+                <h2>Últimas noticias sobre JavaScript</h2>
+                <p>JavaScript sigue evolucionando y ahora cuenta con nuevas funciones...</p>
+            </article>
+
+            <article>
+                <h2>HTML5 Semántico</h2>
+                <p>Aprender a usar etiquetas semánticas mejora la accesibilidad y SEO...</p>
+            </article>
+
+        </section>
+
+        <!-- ASIDE: Contenido lateral, como un sidebar con información extra -->
+        <aside>
+            <h2>Sobre el autor</h2>
+            <p>Juan Fernández Ceacero, desarrollador web y profesor de HTML/CSS.</p>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER: Pie de página con información de contacto o copyright -->
+    <footer>
+        <p>© 2025 Mi Blog de Tecnología. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Buenas prácticas de seguridad al visitar enlaces externos -->
+    <a href="https://www.w3schools.com/html/html_responsive.asp" target="_blank" rel="noreferrer noopener">Enlace</a>
+
 </body>
+
 </html>
