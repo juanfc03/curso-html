@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Fernández Ceacero">
+    <meta name="description" content="Porfolio básico sin estilos para practicar lo que llevo aprendido de HTML">
+
+    <title>Portfolio básico sin estilos</title>
+    <link rel="icon" type="image/x-icon" href="imagesPortfolio/portfolio.ico">
+
+    <script>
+        document.addEventListener("DOMContentLoaded",() => {
+            document.getElementById("fechaActual").innerHTML = Date();
+        });
+    </script>
+
+</head>
+<body>
+
+    <header>
+
+        <h1>Portfolio básico sin estilos</h1>
+        <h2>Juan Fernández Ceacero</h2>
+        <p>Esto es un <strong>portfolio básico sin estilos</strong> para aplicar los conocimientos que llevo aprendidos de HTML</p>
+
+    </header>
+
+    <nav>
+
+        <ul>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <section id="proyectos">
+
+            <h1>Proyectos</h1>
+            <article>
+
+                <h2>Página web de alquiler de coches</h2>
+                <p>Hice el <em title="Capa de presentación">front-end</em> de una página web de alquiler de coches con Bootstrap</p>
+                <ol type="1">
+                    <li>En primer lugar implementé el HTML</li>
+                    <li>Por último use CSS y JavaScript para las funcionalidades</li>
+                </ol>
+
+                <p>Esto es una cita de la página oficial de HTML</p>
+                <blockquote cite="https://lenguajehtml.com/">Si puedes imaginarlo puedes programarlo</blockquote>
+                <a download href="imagesPortfolio/renting.png">
+
+                    <img src="imagesPortfolio/renting.png" alt="Logo de la página web" width="600px" height="300px">
+                </a>
+
+            </article>
+
+            <!-- Añadir más article para cada proyecto -->
+
+        </section>
+        <section id="galeria">
+
+            <h1>Galería</h1>
+            <ul>
+                <li><img src="imagesPortfolio/otaku.jpg" alt="Imagen de Otaku"></li>
+                <li> <picture>
+
+                    <source media="(min-width: 600px)" srcset="imagesPortfolio/personas.jpg">
+                    <img src="" alt=""> <!-- No es buena práctica dejar esto así, pero lo hago de prueba -->
+                </picture></li>
+                <li><a href="https://www.filmaffinity.com/es/film594164.html" target="_blank" rel="noreferrer noopener">
+                    <img src="imagesPortfolio/pajaro.jpg" alt="Imagen de un pajaro"></a>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section id="contacto">
+            <h1>Contacto</h1>
+            <address>
+                Juan Fernández Ceacero <br>
+                622 38 49 51 <br>
+                C/Iberis 1
+            </address>
+        </section>
+
+    </main>
+    
+    <!-- <aside></aside> -->
+
+    <footer>
+        <a href="mailto:juanf.ceacero@gmail.com">Enviar <abbr title="Correo electrónico">email</abbr> a Juan</a>
+        <p id="fechaActual"></p>
+
+    </footer>
+    
+</body>
+</html>
