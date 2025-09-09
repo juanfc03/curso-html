@@ -1,0 +1,11 @@
+# Archivos del sistema
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# Archivos de VS Code
+.vscode/
+
+# Archivos temporales o de edición
+*.log
+*.tmp
+*.swp
