@@ -9,9 +9,126 @@
 </head>
 <body>
     
-    <!-- TODO Continuar por HTML Responsive -->
-    <!-- TODO De MiduDev ver etiqueta Dialog, details, atributo loading lazy -->
-    <!-- TODO Optimización de páginas HTML -->
+    <!-- HTML Responsive -->
+    <img src="images/coche.jpg" alt="Una imagen de un coche" style="max-width: 100%; height: auto;">
+
+    <h1 style="font-size: 10vh;">Hola</h1>
+
+    <!-- Más etiquetas semánticas interesantes -->
+    <figure>
+        <img loading="lazy" src="images/comida.jpg" alt="Una tortitas mexicanas" style="width: 300px; height: 200px;">
+        <figcaption>Un plato de comida mexicana</figcaption>
+    </figure> <!-- Loading lazy se usa para imágenes más abajo de las páginas -->
+
+    <!-- Formularios -->
+
+    <h2>Formulario de contacto</h2>
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Información personal</legend>
+
+            <div>
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="name" placeholder="Juan Fernández Ceacero" required>
+            </div>
+
+            <!-- Tambíen se puede envolver el input en el label -->
+            <div>
+            <label>
+                Edad:
+                <input type="number" name="edad" placeholder="20" required min="0" max="99">
+
+            </label>
+            </div>
+            <div>
+
+                <label>
+                    Correo:
+                    <input type="email" name="correo" placeholder="a@a.com">
+                </label>
+
+            </div>
+            <div>
+                <label for="why">¿Por qué quieres contactar?</label><br>
+                <select name="why" id="id">
+                    
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Me aburro">Me aburro</option>
+
+                </select><br>
+                <label>
+                    ¿Aceptas los términos?
+                    <input type="checkbox" name="terms" required>
+
+                </label>
+
+            </div>
+            <!-- También se puede hacer con DataList, mucho mejor -->
+            <div>
+                <datalist id="idiomas">
+                    <option value="Lenguaje1">Lenguaje1</option>
+                    <option value="Lenguaje2">Lenguaje2</option>
+                    <option value="Lenguaje3">Lenguaje3</option>
+                    <option value="Lenguaje4">Lenguaje4</option>
+                </datalist>
+                <label>
+                    <input list="idiomas" name="lenguajes" required>
+                </label>
+
+            </div>
+
+        </fieldset>
+        <button>Submit</button> <!-- Los botones dentro de un formulario son de type="submit" -->
+
+    </form>
+
+    <!-- De MiduDev etiqueta Dialog, details, atributo loading lazy -->
+    <section>
+        <h2>Preguntas frecuentes</h2>
+
+        <details open>
+            <summary>¿Qué estudios tienes?</summary>
+            <p>Estudié Ingeniería Informática en la universidad.</p>
+        </details>
+
+        <details>
+            <summary>¿Cuánto tiempo llevas programando?</summary>
+            <p>Llevo más de 5 años programando en distintos lenguajes como Python, JavaScript y C++.</p>
+        </details>
+
+        <details>
+            <summary>¿Qué lenguajes de programación manejas?</summary>
+            <p>Principalmente Python, JavaScript, Java y C++. También he trabajado con HTML, CSS y SQL.</p>
+        </details>
+
+    </section>
+
+    <section>
+        <h2>Uso de la etiqueta dialog</h2>
+        <dialog id="dialog">
+
+            <h1>¿Sabías que puedes abrir una modal así?</h1>
+            <p>Y además es totalmente nativo</p>
+            <button id="hide">Cerrar modal</button>
+
+        </dialog>
+        <button id="abrir">Abrir modal</button>
+
+        <script>
+            window.abrir.addEventListener('click', () => {
+
+                window.dialog.showModal()
+            })
+
+            window.hide.addEventListener('click', () => {
+
+                window.dialog.close()
+            })
+        </script>
+
+
+    </section>
 
 </body>
 </html>
