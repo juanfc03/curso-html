@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algunos conceptos básicos de CSS</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/css.ico?v=1">
+    <link rel="stylesheet" href="css/styles1.css">
+
+</head>
+<body>
+
+  <header>
+    <h1>Mi página de ejemplo</h1>
+    <nav>
+      <ul>
+        <li>Inicio</li>
+        <li>Sobre</li>
+        <li>Contacto</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenida</h2>
+      <p>Este es un párrafo de introducción sobre el contenido de la página.</p>
+      <a class="link" href="#sobre">Saber más</a>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre Nosotros</h2>
+      <p>Información sobre la empresa, proyecto o persona.</p>
+      <article>
+        <h3>Historia</h3>
+        <p>Un artículo breve con la historia o detalles importantes.</p>
+      </article>
+      <article>
+        <h3>Misión y Visión</h3>
+        <p>Objetivos y propósitos principales.</p>
+      </article>
+    </section>
+
+    <div class="container">
+        <p>Este es el container</p>
+        <div class="child">
+            <p>Hola mundo</p>
+        </div>
+    </div>
+
+    <label for="name">Nombre: </label>
+    <input type="text" id="name" name="name" placeholder="Juan">
+
+    <aside>
+      <h2>Noticias</h2>
+      <p>Contenido adicional o enlaces relacionados.</p>
+    </aside>
+
+    <section>
+
+        <div>
+        <p>Ejemplo para operador ~, hermano siguiente</p>
+        <span>Hola</span>
+        </div>
+
+        <button>
+            Hola
+        </button>
+        <button>
+            Hola
+        </button>
+
+    </section>
+
+    <!-- Ejemplo para la especificidad -->
+     <div class="contenedor">
+        <b class="texto" id="texto">Hola mundo</b>
+        <img src="../../assets/images/especificidad_ejemplo.png" alt="Ejemplo para la especificidad" width="500px" height="220px">
+     </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+h1{
+
+    /* Hay varias formas de aplicar colores, las vemos */
+    /* color: rgba(100, 0, 230, 50%); */
+    /* color: rgb(100 0 230 / 10%);  Moderno */
+    /* color: hsl(60, 100%, 34%); */
+    /* color: oklch(lightness chroma hue / 50%); */
+    color: #0099ff;
+    border-width: 3px;
+    border-style: solid;
+    /* border-color: currentColor; */
+    font-family: monospace; /* Esta fuente no se hereda del body y coge monospace */
+
+}
+
+.link{
+    color: burlywood;
+}
+.link:hover{
+
+    color: black;
+    /* border: 2px solid red; Afecta al contenido (el contenido se mueve al dibujarse el borde */
+    outline: 2px solid red; /* Se dibuja encima del contenido (no se mueve)*/
+
+}
+
+.link:active{
+
+    color: red;
+
+}
+
+input:focus{
+
+    border: 4px solid red;
+    outline: none; /* Para quitar el contorno amarillo por defecto */
+
+}
+
+body{
+
+    background-color: antiquewhite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell
+    , 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+.container{
+
+    border: 2px solid #09f;
+    font-size: 32px;
+    color: #0099ff;
+    padding: 2px; /* Padding por ejemplo no se hereda */
+
+}
+
+.child{
+
+    border: inherit; /* initial, unset, revert también existen*/
+    font-size: initial; /* Ejemplo */
+
+}
+
+li:first-child{
+
+    color: pink;
+
+}
+
+li:last-child{
+
+    color: red;
+}
+
+section{
+
+    color: green;
+
+}
+
+section p { /* Todos lo p dentro de un section */
+
+    color: red;
+
+}
+
+section > p{ /* Todos los p de primer nivel dentro de un section */
+
+    color: red;
+}
+
+p ~ span{ /* el span hermano siguiente del p, si necesitas que sea justo despues usar operador + */
+
+    color: red;
+
+}
+
+button + button{
+
+    margin-left: 20px;
+
+}
+
+.contenedor{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+/* A continuación voy a poner un ejemplo para la especificidad 
+id > clases > elementos y pseudo-elementos*/
+
+b{
+
+    color: red /* !important para sobreescribir toda especificidad*/; 
+
+}
+
+.texto{
+
+    color: #0099ff;
+    font-size: 26px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal; /* Para quitar la negrita */
+
+}
+
+#texto{
+
+    color: orange;
+
+}
